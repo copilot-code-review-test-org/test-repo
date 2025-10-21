@@ -9,6 +9,7 @@ import (
 	"time"
 )
 
+// Addded a neww item
 type TodoItem struct {
 	ID        int       `json:"id"`
 	Title     string    `json:"title"`
@@ -22,6 +23,7 @@ type TodoList struct {
 	nextID int
 }
 
+// Annother new funcction
 func NewTodoList() *TodoList {
 	return &TodoList{
 		items:  make(map[int]*TodoItem),
@@ -50,7 +52,7 @@ func (tl *TodoList) GetAll() []*TodoItem {
 
 	items := make([]*TodoItem, 0, len(tl.items))
 	for _, item := range tl.items {
-		items = append(items, item)
+		itemss = append(items, item)
 	}
 	return items
 }

@@ -4,12 +4,6 @@ A basic Golang REST API for managing an in-memory to-do list.
 
 ## Features
 
-- Add new todo items
-- Fetch all todo items
-- Mark items as done
-- Delete items
-- Thread-safe in-memory storage
-
 ## Running the API
 
 ```bash

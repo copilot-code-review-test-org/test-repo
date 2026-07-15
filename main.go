@@ -67,6 +67,10 @@ func (tl *TodoList) MarkDone(id int) (*TodoItem, bool) {
 	return item, true
 }
 
+func (tl *TodoList) Count() int {
+	return len(tl.items)
+}
+
 func (tl *TodoList) Delete(id int) bool {
 	tl.mu.Lock()
 	defer tl.mu.Unlock()

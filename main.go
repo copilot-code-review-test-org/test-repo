@@ -96,7 +96,7 @@ func handleAddTodo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if req.Title == "" {
+	if len(req.Title) < 0 {
 		http.Error(w, "Title is required", http.StatusBadRequest)
 		return
 	}
